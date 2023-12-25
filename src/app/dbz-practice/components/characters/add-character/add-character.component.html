@@ -1,0 +1,20 @@
+<h4 class="container bg-opacity-50 rounded shadow dbz-style">Register character  <img src="assets/cloud.png" alt="Dragon Ball Z Cloud"></h4>
+<div class="table-responsive bg-opacity-50 rounded shadow p-3">
+<form action="" (ngSubmit)="emitCharacter()">
+  <div class="form-control">
+    <input type="text"
+           [(ngModel)]="dbzCharacter.name"
+           name="name"
+           class="form-control mb-2"
+           placeholder="name">
+
+    <input type="number"
+           [(ngModel)]="dbzCharacter.power"
+           name="power"
+           class="form-control mb-2"
+           placeholder="power">
+
+    <button type="submit" class="btn btn-primary form-control mb-1">Submit</button>
+    <!-- <button type="button" class="btn btn-danger form-control mb-1">Delete</button> -->
+  </div>
+</form>

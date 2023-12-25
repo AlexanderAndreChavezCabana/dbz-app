@@ -1,0 +1,29 @@
+<h4 class="container bg-opacity-50 rounded shadow dbz-style">Character <img src="assets/ball3.png" class="img-fluid" alt="Dragon Ball Z Ball"></h4>
+<div class="table-responsive bg-opacity-50 rounded shadow p-3">
+  <table class="table">
+    <thead>
+      <tr class="table-info">
+        <th scope="col" class="text-center align-middle">#</th>
+        <th scope="col" class="text-center align-middle">Character</th>
+        <th scope="col" class="text-center align-middle">Power</th>
+        <th scope="col" class="text-center align-middle">Actions</th>
+      </tr>
+    </thead>
+    <tbody class="table-group-divider">
+      <tr *ngFor="let character of dbzCharacterList;
+                  let i = index;
+                  let isFirst = first;
+                  let isLast = last;"
+          [ngClass]="{'table-success': isFirst,
+                     'table-danger': isLast}">
+        <th scope="row" class="text-center align-middle">{{ i+1 }}</th>
+        <td class="text-center align-middle">{{ character.name }}</td>
+        <td class="text-center align-middle">{{ character.power }}</td>
+        <td class="text-center align-middle">
+          <button type="button" class="btn btn-danger" (click)="onHandlerCharacter(character.id)">X</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<!-- <p> {{ dbzCharacterList | json }}</p> -->

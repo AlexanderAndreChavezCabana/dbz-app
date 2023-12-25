@@ -1,1 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
+body, html {
+  height: 100%; /* Asegúrate de que el body y html ocupen toda la altura de la pantalla */
+  margin: 0; /* Elimina cualquier margen predeterminado */
+}
+
+body {
+  background-image: url('/assets/dbz.jpg');
+  background-size: cover; /* Asegura que la imagen de fondo cubra todo el espacio sin repetirse */
+  background-position: center center; /* Centra la imagen de fondo */
+  background-attachment: fixed; /* La imagen de fondo no se mueve al hacer scroll */
+}
+
+/* Agrega estilos para asegurarte de que el contenido sea legible sobre la imagen de fondo */
+.content {
+  background: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente para el contenido */
+  padding: 20px; /* Espaciado alrededor del contenido */
+  border-radius: 8px; /* Bordes redondeados para el contenedor del contenido */
+  /* Asegúrate de definir un contenedor con la clase 'content' alrededor de tu contenido real */
+}
+
+@media only screen and (max-width: 767px) {
+  /* Estilos para pantallas pequeñas, como teléfonos móviles */
+  .content {
+    padding: 10px; /* Menos espaciado para dispositivos más pequeños */
+  }
+}
+
+/* Clase personalizada para la opacidad */
+.bg-opacity-50 {
+  background-color: rgba(255, 255, 255, 0.5); /* Cambia el 0.5 para ajustar la transparencia */
+}
+
+/* Asegúrate de que el color de fondo no esté aplicado directamente a la tabla o al formulario */
+.table-no-bg, .form-no-bg {
+  background-color: transparent;
+}
+
+.dbz-style {
+  color: #FFD700; /* Color dorado para el texto */
+  text-shadow: 2px 1px 0 #FF0000, /* Sombras rojas para un efecto 3D */
+               1px 2px 0 #FFA500, /* Más sombras para profundidad, naranja */
+               2px 1px 0 #FF8C00;
+
+}

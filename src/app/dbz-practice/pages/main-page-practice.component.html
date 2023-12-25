@@ -1,0 +1,38 @@
+<!-- <h1>Practice DBZ List</h1> -->
+<div class="container text-center">
+  <img src="assets/dbztitle.png" alt="Dragon Ball Z Title" class="img-fluid w-50" />
+</div>
+
+<div class="container text-center">
+  <div class="row align-items">
+    <div class="col">
+
+      <!-- app-dbz-list -->
+      <app-dbz-list [dbzCharacterList]="dbzCharactersPractice" (onDeleteCharacter)="onDeleteCharacter($event)"></app-dbz-list>
+
+    </div>
+    <div class="col">
+
+      <!-- app-dbz-add-character -->
+      <app-dbz-add-character (onNewCharacter)="onChangeCharacter($event)"></app-dbz-add-character>
+
+    </div>
+  </div>
+  <hr>
+
+  <div class="row align-items">
+    <div class="col">
+
+      <!-- LIST -->
+      <app-dbz-list-type-character (onDeleteTypeCharacter)="onDeleteTypeCharacter($event)" [typeCharacter]="typesCharacter"></app-dbz-list-type-character>
+
+    </div>
+    <div class="col">
+
+      <!-- TIPOS  -->
+      <app-dbz-add-type-character (onNewTypeCharacter)="onChangeTypeCharacter($event)"></app-dbz-add-type-character>
+
+
+    </div>
+  </div>
+</div>

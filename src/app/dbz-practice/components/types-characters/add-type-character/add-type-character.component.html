@@ -1,0 +1,24 @@
+<h4 class="container bg-opacity-50 rounded shadow dbz-style">Register race <img src="assets/cloud.png" alt="Dragon Ball Z Cloud"></h4>
+<div class="table-responsive bg-opacity-50 rounded shadow p-3">
+<form action="" (ngSubmit)="emitTypeCharacter()">
+  <div class="form-control">
+    <input type="text"
+           [(ngModel)]="typeCharacter.name"
+           name="name"
+           class="form-control mb-2"
+           placeholder="Name">
+
+    <input type="text"
+           [(ngModel)]="typeCharacter.planet"
+           name="planet"
+           class="form-control mb-2"
+           placeholder="Planet">
+
+    <button type="submit" class="btn btn-primary form-control mb-1">Submit</button>
+    <!-- <button type="button" class="btn btn-danger form-control mb-1">Delete</button> -->
+  </div>
+  <!-- <div>
+    {{ typeCharacter | json}}
+  </div> -->
+</form>
+</div>

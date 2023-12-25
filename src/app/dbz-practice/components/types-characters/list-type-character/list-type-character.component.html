@@ -1,0 +1,21 @@
+<h4 class="container bg-opacity-50 rounded shadow dbz-style">Race <img src="assets/ball4.png" class="img-fluid" alt="Dragon Ball Z Ball"></h4>
+<div class="table-responsive bg-opacity-50 rounded shadow p-3">
+  <table class="table table-hover table-no-bg">
+    <thead>
+      <tr class="table-warning">
+        <th scope="col" class="text-center align-middle">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Planet</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody class="table-group-divider">
+      <tr *ngFor="let type of typeCharacter; let i = index">
+        <th scope="row">{{ i + 1 }}</th>
+        <td class="text-center align-middle"> {{ type.name }} </td>
+        <td class="text-center align-middle"> {{ type.planet }} </td>
+        <td><button type="button" class="btn btn-danger" (click)="onHandlerTypeCharacter(type.id)">X</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
